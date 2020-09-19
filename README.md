@@ -17,6 +17,7 @@ The user can also choose what he/she values more.
 
 ![Value selector](/images_readme/mainscreen.PNG)
 
+```
   PTS - USES TS%
     score += offvalue * 5 * player.pts * (player.pts / (2 * player.fga + 0.44 * player.fta));
 
@@ -43,7 +44,7 @@ The user can also choose what he/she values more.
 
    Plus / Minus
     score += winvalue * (3 * player.plusMinus);
-
+```
 --------------------------------------
 
 ## Results
