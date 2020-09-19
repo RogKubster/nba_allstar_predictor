@@ -1,7 +1,7 @@
 # nba_allstar_predictor
 
 --------------------------------------
-#How the NBA All-Star Selection Works
+# How the NBA All-Star Selection Works
 
 * The NBA has an all-star game every year, and the players are chosen through a mix of media, player and community voting.
 * There can only be 12 players from either the Eastern or Western conference
