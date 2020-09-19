@@ -11,5 +11,35 @@
 
 --------------------------------------
 
-Uses stats.nba.com endpoints to get stats for all current nba players and uses formula based on user input to determine how to sort the players. 
-For ex. one user can value offense more than defense, or choose that he/she does not value winnings.
+### How are player sorted?
+The program gives each player a numerical score based on their statistics for the period selected.
+The user can also choose what he/she values more.
+
+![Value selector](/images_readme/mainscreen.png)
+
+  PTS - USES TS%
+    score += offvalue * 5 * player.pts * (player.pts / (2 * player.fga + 0.44 * player.fta));
+
+  AST - USES TO%
+    score += offvalue * ((player.ast - player.tov) * 7);
+
+  REB
+    score += offvalue * (player.oreb * 6) + defvalue * (player.dreb * 6);
+
+  STL & BLK
+    score += defvalue * ((player.stl * 3) + (player.blk * 2));
+
+  FOULS
+    score -= defvalue * (player.pf * 3);
+
+   W/L BOOSTS
+    score += winvalue * (25 * player.wPct);
+
+   Minutes
+    score -= playvalue * (3 * (36 - player.min));
+
+   GP Bonus
+    score += playvalue * (player.gp /3);
+
+   Plus / Minus
+    score += winvalue * (3 * player.plusMinus);
