@@ -8,14 +8,14 @@
 * There are 4 Backcourt players (Point guard, shooting guard)
 * There are 6 Frontcourt players (Small Forward, Power Forward, Center)
 * There are 2 Wildcards that can be any position
-
+* The highest voted start in the all-star game, while the next start on the bench
 --------------------------------------
 
 ### How are player sorted?
 The program gives each player a numerical score based on their statistics for the period selected.
 The user can also choose what he/she values more.
 
-![Value selector](/images_readme/mainscreen.png)
+![Value selector](/images_readme/mainscreen.PNG)
 
   PTS - USES TS%
     score += offvalue * 5 * player.pts * (player.pts / (2 * player.fga + 0.44 * player.fta));
@@ -43,3 +43,12 @@ The user can also choose what he/she values more.
 
    Plus / Minus
     score += winvalue * (3 * player.plusMinus);
+
+--------------------------------------
+
+## Results
+
+Results are shown by conference and by who would start in the all-star game.
+Player's names are all links to their stats.nba.com pages
+
+![all_Star_results](/images_readme/playerscreen.PNG)
