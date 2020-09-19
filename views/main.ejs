@@ -1,0 +1,58 @@
+<html>
+
+    <head>
+        <title>All-Star Predictor</title>
+        <link rel="stylesheet" type="text/css" href="/public/mainpage.css">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="background"></div>
+        
+        <div id = "Real_All_Stars">
+
+            <img id="asglogo" src="/public/asglogo.png">
+
+            <div class="container_title">Choose how much you value each</div>
+
+                <div class="slidercontainer">
+                    <form method="POST" action="/" >
+                        <div class="range_slider">
+                            <label for="offSlider">Offensive Value:</label> <br>
+                            <input type="range" name="offSlider" value="0.5" min="0" max="1" step="0.001">
+                            <!-- <output name="Off Slider Val" id="offSliderval">1</output> -->
+                        </div>
+                        
+                        <div class="range_slider">
+                            <label for="defSlider">Defense Value</label> <br>
+                            <input type="range" name="defSlider" value="0.5" min="0" max="1" step="0.001">
+                            <!-- <output name="Def Slider Val" id="defSliderval">1</output>  oninput="defSliderval.value = defSlider.value"-->
+                        </div>
+                        
+                        <div class="range_slider">
+                            <label for="winSlider">Winning Value</label> <br>
+                            <input type="range" name="winSlider" value="0.5" min="0" max="1" step="0.001">
+                            <!-- <output name="Win Slider Val" id="winSliderval">1</output> -->
+                        </div>    
+
+                        <div class="range_slider">
+                            <label for="playSlider">MP / GP Value</label> <br>
+                            <input type="range" name="playSlider" value="0.5" min="0" max="1" step="0.001">
+                            <!--  <output name="Play Slider Val" id="playSliderval">1</output> -->
+                        </div>
+                        
+                        <div class="period_selector">
+                            <select name="period"> 
+                                <option value="">Regular Season</option>
+                                <option value="Pre All-Star">Pre All Star</option>
+                                <option value="Post All-Star">Post All Star</option>
+                            </select>
+                        </div>
+                        <br>
+                        <input type = "submit" value = "Get All Stars">
+                    </form>
+                </div>  
+        </div>
+
+    </body>
+</html>

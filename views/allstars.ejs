@@ -1,0 +1,56 @@
+<html>
+
+    <head>
+        <title>All-Star Predictor</title>
+        <link rel="stylesheet" type="text/css" href="/public/allstar.css">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap" rel="stylesheet">
+    </head>
+
+    <div class="background"></div>
+
+    <div id = "Real_All_Stars">
+        <img id="asglogo" src="/public/asglogo.png">
+        
+        <div id ="East" class="player_lists">
+            <img id="eastlogo" class="logo" src="/public/east.png">
+            <div class="team_title">Starters</div>
+            <ul>
+                <% allstars.Starters_E.forEach(function(player) { %>
+                    <a href="https://stats.nba.com/player/<%=player.Stats.playerId%>"> <li class="player_name" > <%= player.Name %> | Score: <%= Math.round(player.Score * 100) / 100 %> </li>  </a>
+                    <li class="player_statline"> PTS: <%= player.Stats.pts %> | AST: <%= player.Stats.ast %> | REB: <%= player.Stats.reb %> | STL: <%= player.Stats.stl %> | BLK: <%= player.Stats.blk %></li>
+                <% }); %> 
+            </ul>
+
+            <div class="team_title">Bench</div>
+            <ul>
+                <% allstars.Bench_E.forEach(function(player) { %>
+                    <a href="https://stats.nba.com/player/<%=player.Stats.playerId%>"> <li class="player_name" > <%= player.Name %> | Score: <%= Math.round(player.Score * 100) / 100 %> </li>  </a>
+                    <li class="player_statline"> PTS: <%= player.Stats.pts %> | AST: <%= player.Stats.ast %> | REB: <%= player.Stats.reb %> | STL: <%= player.Stats.stl %> | BLK: <%= player.Stats.blk %></li>
+                <% }); %> 
+            </ul>
+        </div>
+
+        <div id = "West" class="player_lists">
+                <img id="westlogo" class="logo" src="/public/west.png">
+                <div class="team_title">Starters</div>
+                <ul>
+                    <% allstars.Starters_W.forEach(function(player) { %>
+                        <a href="https://stats.nba.com/player/<%=player.Stats.playerId%>"> <li class="player_name" > <%= player.Name %> | Score: <%= Math.round(player.Score * 100) / 100 %> </li>  </a>
+                        <li class="player_statline"> PTS: <%= player.Stats.pts %> | AST: <%= player.Stats.ast %> | REB: <%= player.Stats.reb %> | STL: <%= player.Stats.stl %> | BLK: <%= player.Stats.blk %></li>
+                    <% }); %> 
+                </ul>
+    
+                <div class="team_title">Bench</div>
+                <ul>
+                    <% allstars.Bench_W.forEach(function(player) { %>
+                        <a href="https://stats.nba.com/player/<%=player.Stats.playerId%>"> <li class="player_name" > <%= player.Name %> | Score: <%= Math.round(player.Score * 100) / 100 %> </li>  </a>
+                        <li class="player_statline"> PTS: <%= player.Stats.pts %> | AST: <%= player.Stats.ast %> | REB: <%= player.Stats.reb %> | STL: <%= player.Stats.stl %> | BLK: <%= player.Stats.blk %></li>
+                    <% }); %> 
+                </ul>
+        </div>
+
+        <form action="/">
+            <input type = "submit" value = "Home">
+        </form>
+    </div>
+</html>
